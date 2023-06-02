@@ -10,4 +10,7 @@ class CategoryController extends Controller
     public function index(){
         return view("admin.categories");
     }
+    public function Add(){
+        return view("admin.add-category");
+    }
 }

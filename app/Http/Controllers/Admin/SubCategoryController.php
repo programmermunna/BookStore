@@ -10,4 +10,7 @@ class SubCategoryController extends Controller
     public function index(){
         return view("admin.sub-categories");
     }
+    public function Add(){
+        return view("admin.add-sub-category");
+    }
 }

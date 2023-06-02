@@ -38,28 +38,24 @@ Route::middleware('auth','role:admin')->group(function () {
     //categories
     Route::controller(CategoryController::class)->group(function(){
     Route::get('/admin/categories', 'index')->name('categories');
-    Route::get('/admin/add-category', 'Add')->name('addcategory');
+    Route::get('/admin/add-category', 'Add')->name('add-category');
     });  
     Route::controller(SubCategoryController::class)->group(function(){
-    Route::get('/admin/sub-categories', 'index')->name('subcategories');
-    Route::get('/admin/add-sub-category', 'Add')->name('addsubcategory');
+    Route::get('/admin/sub-categories', 'index')->name('sub-categories');
+    Route::get('/admin/add-sub-category', 'Add')->name('add-sub-category');
     });  
 
     //porducts and orders
     Route::controller(ProductController::class)->group(function(){
     Route::get('/admin/products', 'index')->name('products');
-    Route::get('/admin/add-product', 'Add')->name('addproduct');
+    Route::get('/admin/add-product', 'Add')->name('add-product');
     });  
     Route::controller(OrderController::class)->group(function(){
-        Route::get('/admin/succss-orders', 'Success')->name('succssorders');
-        Route::get('/admin/pending-orders', 'Pending')->name('pendingorders');
-    Route::get('/admin/cancel-orders', 'cancel')->name('cancelorders');
+        Route::get('/admin/succss-orders', 'Success')->name('succss-orders');
+        Route::get('/admin/pending-orders', 'Pending')->name('pending-orders');
+    Route::get('/admin/cancel-orders', 'cancel')->name('cancel-orders');
     });  
 });
-
-
-
-
 
 
 

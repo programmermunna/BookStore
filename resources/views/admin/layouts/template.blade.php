@@ -60,7 +60,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
+            <a href="" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"
@@ -129,7 +129,7 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('admin') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
@@ -141,13 +141,13 @@
             </li>
 
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('add-category') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">Add Category</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('categories') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">All Category</div>
               </a>
@@ -159,13 +159,13 @@
             </li>
 
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('add-sub-category') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">Add Sub-Category</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('sub-categories') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">All Sub-Category</div>
               </a>
@@ -177,13 +177,13 @@
             </li>
 
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('add-product') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">Add Porducts</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('products') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">all Porducts</div>
               </a>
@@ -195,19 +195,19 @@
             </li>
 
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('pending-orders') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">Pending Orders</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('succss-orders') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">Success Orders</div>
               </a>
             </li>  
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="{{ route('cancel-orders') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Analytics">Cancel Orders</div>
               </a>
