@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>@yield('page_title')</title>
 
     <meta name="description" content="" />
     <!-- Favicon -->
@@ -179,13 +179,13 @@
             <li class="menu-item">
               <a href="{{ route('add-product') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Analytics">Add Porducts</div>
+                <div data-i18n="Analytics">Add Porduct</div>
               </a>
             </li>
             <li class="menu-item">
               <a href="{{ route('products') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Analytics">all Porducts</div>
+                <div data-i18n="Analytics">All Porducts</div>
               </a>
             </li>  
 
@@ -338,15 +338,6 @@
       <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

@@ -24,11 +24,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-
-
-
 // ----------Admin Panel-----------
 Route::middleware('auth','role:admin')->group(function () {    
     Route::controller(DashboardController::class)->group(function(){
@@ -51,13 +46,11 @@ Route::middleware('auth','role:admin')->group(function () {
     Route::get('/admin/add-product', 'Add')->name('add-product');
     });  
     Route::controller(OrderController::class)->group(function(){
-        Route::get('/admin/succss-orders', 'Success')->name('succss-orders');
-        Route::get('/admin/pending-orders', 'Pending')->name('pending-orders');
+    Route::get('/admin/succss-orders', 'Success')->name('succss-orders');
+    Route::get('/admin/pending-orders', 'Pending')->name('pending-orders');
     Route::get('/admin/cancel-orders', 'cancel')->name('cancel-orders');
     });  
 });
-
-
 
 // ----------User Panel-----------
 Route::middleware('auth','role:user')->group(function () {  
