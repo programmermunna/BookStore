@@ -18,16 +18,18 @@
             </tr>
           </thead>
           <tbody class="table-border-bottom-0">
+            @foreach($categories as $category)
             <tr>
-              <td>1</td>
-              <td>Electronics</td>
-              <td>20</td>
-              <td>10</td>
+              <td>{{$category->id}}</td>
+              <td>{{$category->category_name}}</td>
+              <td>{{$category->sub_category_count}}</td>
+              <td>{{$category->product_count}}</td>
               <td>
-                <a href="" class="btn btn-primary">Edit</a>
-                <a href="" class="btn btn-warning">Delete</a>
+                <a href="{{ route('editcategory',$category->id) }}" class="btn btn-primary">Edit</a>
+                <a href="{{ route('deletecategory',$category->id) }}" class="btn btn-warning">Delete</a>
               </td>
-            </tr>            
+            </tr>
+            @endforeach           
           </tbody>
         </table>
       </div>
