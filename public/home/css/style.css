@@ -1,5 +1,4 @@
---------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
-/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
 
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -214,7 +213,8 @@ button {
 .banner_bg_main {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    /* background-image: url("../images/banner-bg.png"); */
+    background-image: url("https://img.freepik.com/free-vector/yellow-comic-zoom-lines-background_1017-15136.jpg");
     height: auto;
     background-size: 100%;
     background-repeat: no-repeat;

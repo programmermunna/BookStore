@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SubCategoryController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,16 +22,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 // ----------Front Panel-----------
-Route::get('/', function () {
-    return view('home.home');
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/', 'Index')->name('home');
+});
+
+Route::controller(ClientController::class)->group(function(){
+    Route::get('/item/{slug}', 'SinglProduct')->name('singl_product');
+    Route::get('/category', 'Category')->name('category');
+    Route::get('/add-to-cart', 'AddToCart')->name('add_to_cart');
+    Route::get('/checkout', 'Checkout')->name('checkout');
+    Route::get('/user-profile', 'UserProfile')->name('user_profile');
+    Route::get('/best-seller', 'BestSeller')->name('best_seller');
+    Route::get('/gift-ideas', 'GiftIdeas')->name('gift_idea');
+    Route::get('/new-release', 'NewRelease')->name('new_release');
+    Route::get('/todays-deal', 'TodaysDeal')->name('todays_deal');
+    Route::get('/customer-service', 'CustomerService')->name('customer_service');
 });
 
 // ----------Admin Panel-----------
 Route::middleware('auth','role:admin')->group(function () {    
     Route::controller(DashboardController::class)->group(function(){
     Route::get('/admin', 'index')->name('admin');
-    });  
-
+    });
     //categories
     Route::controller(CategoryController::class)->group(function(){
     Route::get('/admin/categories', 'index')->name('categories');
