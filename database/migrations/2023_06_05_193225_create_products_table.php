@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('product_subcategory_name');
             $table->integer('product_subcategory_id');
             $table->string('product_img');
+            $table->integer('quantity');
             $table->timestamps();
         });
     }

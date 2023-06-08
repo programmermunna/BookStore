@@ -5,7 +5,16 @@
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pages /</span> All Sub Categories</h4>
     <!-- Basic Bootstrap Table -->
     <div class="card">
-      <h5 class="card-header">Table Basic</h5>
+      <div class="d-flex justify-content-between">
+        <h5 class="card-header">Table Basic</h5>
+        <h5 class="card-header">
+          @if(session()->has('message'))
+              <div class="alert alert-success">
+                {{ session()->get('message') }}
+              </div>
+            @endif
+        </h5>
+      </div>
       <div class="table-responsive text-nowrap">
         <table class="table">
           <thead>
